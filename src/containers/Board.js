@@ -6,7 +6,7 @@ import '../styles/Board.css';
 // containers
 import Square from "./Square";
 
-class Board extends Component {
+export default class Board extends Component {
   render () {
     return (
       <div className="board">
@@ -15,5 +15,3 @@ class Board extends Component {
     );
   }
 }
-
-export default Board;

@@ -3,7 +3,10 @@ import { Component } from "react";
 // styles
 import '../styles/Square.css';
 
-class Square extends Component {
+// container
+import Pawn from "./Pawn";
+
+export default class Square extends Component {
   constructor (props) {
     super(props);
 
@@ -15,12 +18,16 @@ class Square extends Component {
   }
 
   render () {
-    return (
-      <>
-        {this.state.tiles.map(t => <div className="square" key={t} />)}
-      </>
+    return this.state.tiles.map( tile =>
+      {if (/* todo */) {
+        return (
+          <div className="square" key={tile} >
+            <Pawn />
+          </div>
+        );
+      } else {
+        return <div className="square" key={tile} />;
+      }}
     );
   }
 }
-
-export default Square;
