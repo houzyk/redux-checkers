@@ -1,0 +1,7 @@
+.board {
+  height: 70vh;
+  width: 70vh;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 5px;
+}
